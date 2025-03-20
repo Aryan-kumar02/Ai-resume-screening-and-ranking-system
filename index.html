@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Screening</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 500px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-label, .upload-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .file-label {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+            border: none;
+        }
+
+        .upload-btn {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            border: none;
+        }
+
+        .file-label:hover, .upload-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        #file-name {
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        #status {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Upload Resume for AI Screening</h2>
+        
+        <div class="button-container">
+            <label for="resumeInput" class="file-label">Choose Files</label>
+            <input type="file" id="resumeInput" name="resumes" multiple>
+            <p id="file-name">No file chosen</p>
+            <button class="upload-btn" id="uploadBtn">Upload</button>
+        </div>
+
+        <p id="status"></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
